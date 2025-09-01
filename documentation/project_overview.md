@@ -118,5 +118,46 @@ Both datasets face imbalance: common categories like DoS dominate, while rare bu
 * **Reinforcement Learning** → improves via interaction and rewards
 
 
+Here’s a polished version of your write-up, keeping it clear, structured, and professional while flowing smoothly into the SentinelNet statement:
 
-Would you like me to make it **shorter and more professional** (like a research paper), or keep this **detailed explanatory style** (like a project report for mentors)?
+---
+
+### Linear Regression – Fundamentals
+
+Linear Regression is one of the most fundamental and interpretable machine learning models, commonly applied to understand and predict relationships between variables.
+
+**Core Assumption:**
+It assumes a linear relationship between the independent variables (features) and the dependent variable (target).
+
+**Core Idea:**
+
+* Predicts an outcome **y** as a weighted sum of input features **x** plus a bias term.
+* **Equation:**
+
+  $$
+  y = w_1x_1 + w_2x_2 + \dots + w_nx_n + b
+  $$
+* **Weights (w):** Learned during training by minimizing prediction error.
+
+**Training Process:**
+
+* Methods such as **Ordinary Least Squares (OLS)** or **Gradient Descent** are used.
+* The goal is to minimize the difference between predicted and actual values, typically measured using **Mean Squared Error (MSE)**.
+
+---
+
+### Logistic Regression and the Logistic Curve
+
+While Linear Regression is suited for continuous outcomes, **Logistic Regression** is applied to classification problems.
+
+* It models probabilities using the **logistic (sigmoid) curve**, mapping outputs to a range between 0 and 1.
+
+
+<img width="810" height="654" alt="image" src="https://github.com/user-attachments/assets/499f0e5c-e066-46c9-8a05-45c054e5fd5d" />
+
+
+
+
+
+
+
