@@ -157,7 +157,95 @@ While Linear Regression is suited for continuous outcomes, **Logistic Regression
 
 
 
+---
+
+## 📊 Train-Test Split
+
+The **train-test split** is a method used to evaluate how well a machine learning model generalizes to unseen data.
+
+* **Training Set** → Used to train the model and learn patterns.
+* **Test Set** → Used to evaluate performance on unseen examples.
+
+📌 **Why it matters**:
+
+* Prevents **overfitting** (model memorizing instead of learning).
+* Gives a realistic estimate of real-world performance.
+
+---
+
+## ⚖️ Scaling vs Normalization
+
+Both are preprocessing steps to adjust feature values, but they serve different purposes:
+
+| Aspect                 | **Scaling (Standardization)**                                        | **Normalization (Min-Max)**                                          |
+| ---------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Definition**         | Transforms features to have mean = 0 and standard deviation = 1      | Rescales features to a fixed range, usually \[0,1]                   |
+| **Purpose**            | Handles varying feature scales for better ML performance             | Ensures features are bounded & comparable                            |
+| **Use Cases**          | Algorithms assuming Gaussian distribution (SVM, Logistic Regression) | Algorithms sensitive to feature bounds (Neural Networks, image data) |
+| **Effect on Outliers** | Less sensitive to outliers                                           | Strongly affected by outliers                                        |
+
+📌 **Key Difference**:
+
+* **Scaling** standardizes data around zero.
+* **Normalization** squeezes data into a fixed range.
+
+---
+
+## 🎲 Role of Random Seed
+
+The **random seed** ensures **reproducibility** in ML experiments.
+
+* It initializes the random number generator so splitting, shuffling, and weight initialization give the **same result every time**.
+* Without fixing a seed, each run produces slightly different results.
+
+📌 **Why it matters**:
+
+* Makes debugging easier.
+* Ensures consistency when sharing code with others.
+
+---
+
+## 🧩 Role of Stratify in Train-Test Split
+
+When splitting data, **stratification** keeps the **original class distribution** the same in both train and test sets.
+
+* Ensures rare classes (like minority attack types in NSL-KDD) appear in both sets.
+* Prevents biased models that overfit to majority classes.
+
+📌 **Why it matters**:
+
+* Provides **fair and representative sampling**.
+* Essential for **imbalanced datasets** (cybersecurity, fraud detection, medical diagnosis).
 
 
+## **StandardScaler:**
+
+The StandardScaler in scikit-learn is a preprocessing tool that standardizes numerical features.
+It transforms the data so that:
+
+The mean = 0
+
+The standard deviation = 1
+
+This process is called standardization (z-score normalization).
+
+### **Importance:**
+
+Many ML algorithms are sensitive to feature scales.
+Features with large ranges can dominate those with smaller ranges.
+Standardization ensures that all features contribute equally to model training.
+
+
+# **SMOTE**
+
+SMOTE (Synthetic Minority Over-sampling Technique) is a method used to handle imbalanced datasets in machine learning.
+Instead of simply duplicating minority class samples, SMOTE creates new synthetic samples by interpolating between existing ones.
+
+
+### **Why Use SMOTE?**
+
+Balances the dataset → Prevents models from being biased toward the majority class.
+Better generalization → Models learn decision boundaries more effectively.
+Improves recall & F1-score → Especially important in fraud detection, cybersecurity, healthcare, etc.
 
 
